@@ -6,13 +6,13 @@
 /*   By: cbrito-s <cbrito-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:12:55 by cbrito-s          #+#    #+#             */
-/*   Updated: 2024/10/25 19:06:44 by cbrito-s         ###   ########.fr       */
+/*   Updated: 2024/10/30 12:18:03 by cbrito-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	free_arr(char **arr, size_t size)
+static void	free_arr(char **arr, size_t size)
 {
 	size_t	i;
 
@@ -25,7 +25,7 @@ void	free_arr(char **arr, size_t size)
 	free(arr);
 }
 
-size_t	word_len(char const *s, char c)
+static size_t	word_len(char const *s, char c)
 {
 	size_t	len;
 
@@ -35,7 +35,7 @@ size_t	word_len(char const *s, char c)
 	return (len);
 }
 
-char	*get_word(char const *s, char c)
+static char	*get_word(char const *s, char c)
 {
 	char	*str;
 	size_t	len;
@@ -56,7 +56,7 @@ char	*get_word(char const *s, char c)
 	return (str);
 }
 
-size_t	word_count(char const *s, char c)
+static size_t	word_count(char const *s, char c)
 {
 	size_t	cont;
 

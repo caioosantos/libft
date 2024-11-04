@@ -6,13 +6,13 @@
 /*   By: cbrito-s <cbrito-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:56:48 by cbrito-s          #+#    #+#             */
-/*   Updated: 2024/10/24 16:06:09 by cbrito-s         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:12:53 by cbrito-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t	i;
 

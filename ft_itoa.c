@@ -6,13 +6,13 @@
 /*   By: cbrito-s <cbrito-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:29:17 by cbrito-s          #+#    #+#             */
-/*   Updated: 2024/10/24 18:17:58 by cbrito-s         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:47:16 by cbrito-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	length(int n)
+static int	ft_length(int n)
 {
 	int	len;
 
@@ -36,7 +36,7 @@ char	*ft_itoa(int n)
 	unsigned int	nb;
 
 	nb = n;
-	len = length(n);
+	len = ft_length(n);
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);

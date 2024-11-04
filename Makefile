@@ -47,25 +47,33 @@ SRCS_BONUS =	ft_lstnew_bonus.c \
 
 OBJECTS = $(SRCS:.c=.o)
 OBJECTS_BONUS = $(SRCS_BONUS:.c=.o)
+ALL_OBJECTS = $(OBJECTS) $(OBJECTS_BONUS)
 
-CC = gcc
+CC = cc
 FLAGS = -Wall -Werror -Wextra
+
+BONUS_ADDED = .bonus_added
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
-bonus: $(OBJECTS_BONUS)
+bonus: $(NAME) $(OBJECTS_BONUS) $(BONUS_ADDED)
+
+$(BONUS_ADDED): $(OBJECTS_BONUS)
 	ar rcs $(NAME) $(OBJECTS_BONUS)
+	touch $(BONUS_ADDED)
 
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJECTS) $(OBJECTS_BONUS)
+	rm -f $(OBJECTS) $(OBJECTS_BONUS) $(BONUS_ADDED)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all bonus clean fclean re

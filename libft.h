@@ -6,20 +6,15 @@
 /*   By: cbrito-s <cbrito-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:16:55 by cbrito-s          #+#    #+#             */
-/*   Updated: 2024/10/29 14:16:55 by cbrito-s         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:46:20 by cbrito-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
-# include <stddef.h>
-# include <ctype.h>
 # include <unistd.h>
-# include <fcntl.h>
 # include <stdint.h>
 
 typedef struct s_list
@@ -58,7 +53,7 @@ char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
@@ -74,4 +69,4 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-#endif /* LIBFT_H */
+#endif

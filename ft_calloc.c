@@ -6,7 +6,7 @@
 /*   By: cbrito-s <cbrito-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:51:14 by cbrito-s          #+#    #+#             */
-/*   Updated: 2024/10/29 14:17:00 by cbrito-s         ###   ########.fr       */
+/*   Updated: 2024/10/30 14:25:46 by cbrito-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	dest = (char *)malloc(total * sizeof(char));
 	if (!dest)
 		return (0);
-	ft_memset(dest, '\0', total);
+	ft_bzero(dest, total);
 	return (dest);
 }

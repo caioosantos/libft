@@ -6,7 +6,7 @@
 /*   By: cbrito-s <cbrito-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:06:22 by cbrito-s          #+#    #+#             */
-/*   Updated: 2024/10/28 14:18:56 by cbrito-s         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:47:43 by cbrito-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*current;
+	t_list	*att;
 
 	if (!lst || !new)
 		return ;
@@ -22,9 +22,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 	else
 	{
-		current = *lst;
-		while (current->next)
-			current = current->next;
-		current->next = new;
+		att = *lst;
+		while (att->next)
+			att = att->next;
+		att->next = new;
 	}
 }
